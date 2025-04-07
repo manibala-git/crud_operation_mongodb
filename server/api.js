@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "https://api-practice-qb70.onrender.com/movies/";
+const API_URL = import.meta.env.VITE_BACKEND;
+
 
 
 export const getMovies = async()=>{

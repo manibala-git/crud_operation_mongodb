@@ -106,7 +106,7 @@ useEffect(() => {
         </div>
         
         <p>{addSuccessful}</p>
-        <h3>Movies</h3>
+        <h3>Movies in the list shown below</h3>
         <ul className='list'>
           {movies.map((movie)=>(
             <li key={movie._id}>
