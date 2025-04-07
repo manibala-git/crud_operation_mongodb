@@ -1,4 +1,3 @@
-/* General styles */
 body {
   margin: 0;
   padding: 0;
@@ -7,12 +6,6 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-}
-
-.box {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
 }
 
 .container {
@@ -28,9 +21,18 @@ body {
   box-shadow: 0 4px 8px black;
 }
 
+.box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
 
 input {
-  
   width: 350px;
   padding: 10px;
   margin-bottom: 10px;
@@ -39,12 +41,13 @@ input {
   font-size: 18px;
   outline: none;
 }
-.btn{
+
+.btn {
   margin-top: 20px;
 }
 
 button {
-  width: 60px; 
+  width: 60px;
   background-color: blue;
   color: white;
   padding: 10px;
@@ -60,23 +63,79 @@ label {
   font-weight: 500;
 }
 
-
 li {
   display: flex;
   align-items: center;
- 
   border: 2px solid #ccc;
   border-radius: 5px;
   padding: 10px;
- 
   width: 80vw;
   margin-bottom: 10px;
 }
 
-
-li button {
+.btnedit {
   margin-left: auto;
-  width: 60px; 
-  height: auto;
-  background-color: green; 
+  width: 60px;
+  margin-right: 10px;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btndelete {
+  width: 60px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95vw;
+    padding: 20px;
+  }
+
+  .box {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .btnedit,
+  .btndelete {
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn button {
+    width: 100%;
+  }
+
+  h2,
+  h3 {
+    text-align: center;
+  }
 }
